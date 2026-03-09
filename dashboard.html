@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careerfolio Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2 class="logo">Careerfolio Dashboard</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="details.html">Create Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="dashboard">
+  <h1>Your Portfolio Overview</h1>
+
+  <div id="portfolio-display" class="portfolio-box">
+
+    <p><strong>Name:</strong> <span id="display-name"></span></p>
+
+    <p><strong>Photo:</strong></p>
+    <img id="display-photo" src="" alt="Profile Photo"
+         style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid #333;">
+
+    <p><strong>Email:</strong> <span id="display-email"></span></p>
+    <p><strong>Mobile:</strong> <span id="display-mobile"></span></p>
+    <p><strong>About:</strong> <span id="display-about"></span></p>
+    <p><strong>Education:</strong> <span id="display-education"></span></p>
+    <p><strong>Experience:</strong> <span id="display-experience"></span></p>
+    <p><strong>Meeting Details:</strong> <span id="display-meeting"></span></p>
+    <p><strong>Skills:</strong> <span id="display-skills"></span></p>
+    <p><strong>Your Projects:</strong> <span id="display-projects"></span></p>
+
+    <p><strong>LinkedIn:</strong> <a id="display-linkedin" href="#" target="_blank"></a></p>
+    <p><strong>GitHub:</strong> <a id="display-github" href="#" target="_blank"></a></p>
+
+    <hr>
+
+    <h2> Career Match Score</h2>
+    <div id="suggested-jobs"></div>
+
+    <br>
+
+    <h2> Project Match Score</h2>
+    <div id="suggested-projects"></div>
+
+  </div>
+
+  <br>
+
+  <button id="downloadPDF" class="btn">Download Portfolio as PDF</button>
+
+</section>
+
+<footer>
+  <p>© 2025 Careerfolio | Built for Students</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

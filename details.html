@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Portfolio - Careerfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2 class="logo">Careerfolio</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="dashboard">
+  <h1>Create Your Portfolio</h1>
+
+  <form id="portfolioForm">
+
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Email:</label>
+    <input type="email" id="email" required>
+
+    <label>Mobile:</label>
+    <input type="text" id="mobile">
+
+    <label>Upload Photo:</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <label>About You:</label>
+    <textarea id="about"></textarea>
+
+    <label>Education:</label>
+    <input type="text" id="education">
+
+    <label>Experience:</label>
+    <input type="text" id="experience">
+
+    <label>Meeting Details:</label>
+    <input type="text" id="meeting">
+
+    <label>Skills (comma separated):</label>
+    <input type="text" id="skills" placeholder="Python, SQL, HTML, Java">
+
+    <label>Your Projects:</label>
+    <input type="text" id="projects">
+
+    <label>LinkedIn URL:</label>
+    <input type="url" id="linkedin">
+
+    <label>GitHub URL:</label>
+    <input type="url" id="github">
+
+    <br><br>
+
+    <button type="submit" class="btn">Generate Portfolio</button>
+
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Careerfolio | Built for Students</p>
+</footer>
+
+<script>
+document.getElementById("portfolioForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const reader = new FileReader();
+  const photoFile = document.getElementById("photo").files[0];
+
+  if (photoFile) {
+    reader.readAsDataURL(photoFile);
+    reader.onload = function() {
+      saveData(reader.result);
+    };
+  } else {
+    saveData("");
+  }
+
+  function saveData(photoData) {
+    const portfolioData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      mobile: document.getElementById("mobile").value,
+      photo: photoData,
+      about: document.getElementById("about").value,
+      education: document.getElementById("education").value,
+      experience: document.getElementById("experience").value,
+      meeting: document.getElementById("meeting").value,
+      skills: document.getElementById("skills").value,
+      projects: document.getElementById("projects").value,
+      linkedin: document.getElementById("linkedin").value,
+      github: document.getElementById("github").value
+    };
+
+    localStorage.setItem("portfolioData", JSON.stringify(portfolioData));
+    window.location.href = "dashboard.html";
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+  background: #f4f6fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #1e2a47;
+  padding: 15px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1cc88a;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: #4e73df;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e2a47;
+  color: white;
+}
+
+/* ===== Features Section ===== */
+.features {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* Layout for feature cards */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1e2a47;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
